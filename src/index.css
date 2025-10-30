@@ -43,10 +43,6 @@
 }
 
 .tree-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1rem 0;
   background-color: #f5f5f5;
   padding: 1rem;
   height: 100vh;
@@ -67,11 +63,12 @@
 }
 
 .tree-container {
-  margin-left: 1rem;
-  padding-left: 0.5rem;
+  padding-left: 20px;
+  padding-top: 10px;
   border-left: 2px solid #e0e0e0;
+  margin-left: 20px;
 }
 
-.tree-container input {
-  margin: 0.5rem;
+.text-center {
+  text-align: center;
 }

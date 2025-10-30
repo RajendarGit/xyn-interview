@@ -33,38 +33,35 @@ const TreeNode: React.FC<TreeNodeProps> = ({ node, onUpdate, onDelete }) => {
 
   return (
     <div className="tree-container">
-      <div className="tree-flex">
+      <input
+        type="text"
+        value={node.value}
+        onChange={handleValueChange}
+        readOnly={node.readonly}
+        className="input"
+        disabled={node.readonly}
+      />
+      <label>
         <input
-          type="text"
-          value={node.value}
-          onChange={handleValueChange}
-          readOnly={node.readonly}
-          className="input"
-          disabled={node.readonly}
+          type="checkbox"
+          checked={node.readonly}
+          onChange={toggleReadonly}
         />
-        <label>
-          <input
-            type="checkbox"
-            checked={node.readonly}
-            onChange={toggleReadonly}
-          />
-          Readonly
-        </label>
-        <button className="btn btn-sm" onClick={() => onDelete(node.id)}>
-          <Trash className="icon" />
-        </button>{" "}
-        <button className="btn btn-sm" onClick={addChild}>
-          <Plus className="icon" />
-        </button>
-      </div>
+        Readonly
+      </label>
+      <button className="btn btn-sm" onClick={() => onDelete(node.id)}>
+        <Trash className="icon" />
+      </button>{" "}
+      <button className="btn btn-sm" onClick={addChild}>
+        <Plus className="icon" />
+      </button>
       {node.children.map((child, index) => (
-        <div key={child.id} className="tree-children">
-          <TreeNode
-            node={child}
-            onUpdate={(updatedChild) => updateChild(index, updatedChild)}
-            onDelete={deleteChild}
-          />
-        </div>
+        <TreeNode
+          key={child.id}
+          node={child}
+          onUpdate={(updatedChild) => updateChild(index, updatedChild)}
+          onDelete={deleteChild}
+        />
       ))}
     </div>
   );

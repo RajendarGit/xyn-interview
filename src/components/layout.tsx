@@ -7,7 +7,7 @@ const Layout = () => {
 
   return (
     <div>
-      <h1>xyicon-interview</h1>
+      <h1 className="text-center">xyicon-interview</h1>
       <div className="flex-section">
         <button
           onClick={() => setActiveTab("polygon")}
