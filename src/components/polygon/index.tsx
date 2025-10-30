@@ -2,7 +2,7 @@ import { useState } from "react";
 import { closestPointInPolygon } from "./closest-pointIn-polygon";
 import type { Point } from "../../lib/type";
 
-const canvasSize = 400;
+const canvasSize = 500;
 const triangle: Point[] = [
   { x: 100, y: 100 },
   { x: 200, y: 50 },
@@ -47,7 +47,7 @@ export default function PolygonVisualizer() {
 
         drawPolygon(ctx, triangle, "red");
         drawPolygon(ctx, square, "blue");
-        drawPolygon(ctx, rectangle, "pink");
+        drawPolygon(ctx, rectangle, "magenta");
 
         drawPoint(ctx, pos, "green");
         drawPoint(ctx, closestTriangle, "yellow");

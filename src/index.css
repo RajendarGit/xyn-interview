@@ -52,13 +52,6 @@
   height: 100vh;
 }
 
-.tree-section-flex {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin: 1rem 0;
-}
-
 .icon {
   width: 14px;
 }
@@ -71,4 +64,14 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+.tree-container {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid #e0e0e0;
+}
+
+.tree-container input {
+  margin: 0.5rem;
 }
